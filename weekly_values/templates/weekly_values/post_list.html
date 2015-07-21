@@ -1,4 +1,19 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <head>
+        <title>Weekly values</title>
+    </head>
+    <body>
+    	<div>
+    		<h1><a href="/">Will you think about that?</a></h1>
+		</div>
+
+		{% for post in posts %}
+    		<div>
+       			<p>published: {{ post.published_date }}</p>
+       			<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{ post.text|linebreaks }}</p>
+    		</div>
+		{% endfor %}
+
+    </body>
 </html>
